@@ -77,15 +77,17 @@
 
  #include <iostream>
 
- void increment(int *v) {
-     (*v)++;
- }
+void update(int *a, int *b) {
+    int temp = *a;
+    *a = *a + *b;
+    *b = temp - *b;
+    if (*b < 0) *b = -*b;
+}
  
  int main() {
-     int a;
-     scanf("%d", &a);
-     increment(&a);
-     printf("%d", a);
+     int a, b;
+     std::cin >> a >> b;
+     update(&a, &b);
+     std::cout << a << std::endl << b << std::endl;
      return 0;
- }  
- 
+ }
