@@ -39,3 +39,20 @@
  * Saída:
  * 0
  */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int n, erased = 0;
+    string s;
+    cin >> n;
+    cin >> s;
+    for (int i = 1; i < n; ++i) {
+        if (s[i] == s[i-1]) {
+            ++erased;
+        }
+    }
+    cout << erased << endl;
+}

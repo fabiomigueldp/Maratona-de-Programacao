@@ -53,3 +53,22 @@
  * No terceiro exemplo, todas as pessoas precisam se abaixar, exceto a última.
  * A largura mínima necessária da estrada é igual a 2 + 2 + 2 + 2 + 2 + 1 = 11.
  */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int nPessoas, hCerca, largura;
+
+    cin >> nPessoas >> hCerca;
+    largura = 0;
+
+    for (int i = 0; i < nPessoas; i++) {
+        int hPessoa;
+        cin >> hPessoa;
+        largura += (hPessoa > hCerca) ? 2 : 1;
+    }
+
+    cout << largura << endl;
+}
