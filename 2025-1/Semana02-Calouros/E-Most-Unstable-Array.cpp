@@ -58,3 +58,10 @@
  * tem soma 5 e valor |0-5| + |5-0| + |0-0| + |0-0| = 5 + 5 = 10. Este arranjo
  * [0, m, 0, ..., 0] maximiza a soma das diferenças para n > 2, resultando em 2m).
  */
+
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+

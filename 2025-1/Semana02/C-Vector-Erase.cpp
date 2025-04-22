@@ -74,41 +74,34 @@
  * 5. Os elementos finais são 1, 8, 9.
  */
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-
-using namespace std;
-
-int main() {
-
-    int tamanhoVetor;
-    cin >> tamanhoVetor;
-
-    vector<int>valores;
-    for (int i = 0; i < tamanhoVetor; i++) {
-        cin >> valores[i];
-    }
-
-    int posicaoRemover;
-    cin >> posicaoRemover;
-
-    int inicioRemocao, fimRemocao;
-    cin >> inicioRemocao >> fimRemocao;
-
-    valores.erase(valores.begin() + posicaoRemover - 1);
-
-    valores.erase(valores.begin() + inicioRemocao - 1, valores.begin() + fimRemocao + 1);
-
-    int tamanhoVetor = valores.size();
-
-    cout << tamanhoVetor << endl;
-    for (int i = 0; i < tamanhoVetor; i++) {
-        cout << valores[i] << " ";
-    }
-
-    cout << endl;
-
-    return 0;
-}
+ #include <iostream>
+ #include <vector>
+ using namespace std;
+ 
+ int main() {
+     ios::sync_with_stdio(false);
+     cin.tie(nullptr);
+ 
+     int N;
+     cin >> N;
+     vector<int> v(N);
+     for (int i = 0; i < N; i++) {
+         cin >> v[i];
+     }
+ 
+     int x;
+     cin >> x;
+     int a, b;
+     cin >> a >> b;
+ 
+     v.erase(v.begin() + x - 1);
+     v.erase(v.begin() + a - 1, v.begin() + b - 1);
+ 
+     cout << v.size() << "\n";
+     for (int i = 0; i < (int)v.size(); i++) {
+         cout << v[i] << (i + 1 < (int)v.size() ? ' ' : '\n');
+     }
+ 
+     return 0;
+ }
+ 

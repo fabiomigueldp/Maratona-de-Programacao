@@ -52,3 +52,24 @@
  * No segundo exemplo, os amigos implementarão apenas o segundo problema, pois
  * Vasya e Tonya têm certeza sobre a solução.
  */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int p, v, t, n, s = 0;
+
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        cin >> p >> v >> t;
+        if (p + v + t >= 2){
+            s ++;
+        }
+    }
+
+    cout << s << endl;
+
+    return 0;
+}

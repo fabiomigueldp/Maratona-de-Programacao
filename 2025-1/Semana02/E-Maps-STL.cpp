@@ -74,3 +74,40 @@
  *   - Se não existir, imprima 0.
  */
 
+ #include <iostream>
+ #include <map>
+ #include <string>
+ 
+ using namespace std;
+ 
+ int main() {
+     int q;
+     cin >> q;
+ 
+     map<string, int> m;
+     while (q--) {
+         int t;
+         cin >> t;
+         if (t == 1) {
+             string x;
+             int y;
+             cin >> x >> y;
+             m[x] += y;
+         } else if (t == 2) {
+             string x;
+             cin >> x;
+             m.erase(x);
+         } else {
+             string x;
+             cin >> x;
+             auto it = m.find(x);
+             if (it != m.end()) {
+                 cout << it->second << '\n';
+             } else {
+                 cout << 0 << '\n';
+             }
+         }
+     }
+ 
+     return 0;
+ }
