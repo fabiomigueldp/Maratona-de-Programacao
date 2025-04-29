@@ -50,3 +50,4 @@
 // Outra criança pede 20 pacotes. Kay e Gerda não têm, então a criança vai embora angustiada.
 // Um transportador traz 40 pacotes, agora Kay e Gerda têm 42 pacotes.
 // Uma criança pede 20 pacotes e os recebe. Restam 22 pacotes.
+
